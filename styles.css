@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -21,6 +21,22 @@ section {
     background-position: center;
 }
 
+#home h1 {
+    font-size: 4em;
+}
+
+#about,
+#journey,
+#experience,
+#portfolio,
+#contact {
+    background: linear-gradient(135deg, #f06, #b2e);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -31,7 +47,7 @@ section {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #333;
+    background-color: #b2e;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -52,7 +68,7 @@ section {
     height: 25px;
     right: -17px;
     background-color: white;
-    border: 4px solid #333;
+    border: 4px solid #b2e;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -97,6 +113,7 @@ section {
     background-color: white;
     position: relative;
     border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 600px) {
