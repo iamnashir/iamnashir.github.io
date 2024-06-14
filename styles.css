@@ -17,6 +17,7 @@ section {
 #home {
     background: #333;
     color: #fff;
+    padding: 100px 0;
 }
 
 .timeline {
@@ -124,4 +125,12 @@ section {
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent white;
     }
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }

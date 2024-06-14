@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    AOS.init();
+
     const experience = [
         {
             title: 'Job Title One',
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add('col-md-4', 'mb-4');
 
         card.innerHTML = `
-            <div class="card h-100">
+            <div class="card h-100" data-aos="flip-left">
                 <img src="${job.image}" class="card-img-top" alt="${job.title}">
                 <div class="card-body">
                     <h5 class="card-title">${job.title}</h5>
