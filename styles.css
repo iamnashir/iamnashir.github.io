@@ -15,9 +15,10 @@ section {
 }
 
 #home {
-    background: #333;
     color: #fff;
     padding: 100px 0;
+    background-size: cover;
+    background-position: center;
 }
 
 .timeline {

@@ -1,3 +1,3 @@
 git add .
-git commit -m "Add advanced animations and fixed navbar"
+git commit -m "Add realistic data and dynamic backgrounds"
 git push origin main

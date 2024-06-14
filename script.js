@@ -3,22 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const experience = [
         {
-            title: 'Job Title One',
-            company: 'Company One',
-            description: 'Description of job one.',
-            image: 'path/to/image1.jpg'
+            title: 'Software Engineer',
+            company: 'Tech Solutions',
+            description: 'Developed web applications and improved user interfaces.',
+            image: 'https://source.unsplash.com/1600x900/?tech'
         },
         {
-            title: 'Job Title Two',
-            company: 'Company Two',
-            description: 'Description of job two.',
-            image: 'path/to/image2.jpg'
+            title: 'Senior Developer',
+            company: 'Innovative Startups',
+            description: 'Led a team of developers and worked on cutting-edge technologies.',
+            image: 'https://source.unsplash.com/1600x900/?coding'
         },
         {
-            title: 'Job Title Three',
-            company: 'Company Three',
-            description: 'Description of job three.',
-            image: 'path/to/image3.jpg'
+            title: 'Freelancer',
+            company: 'Self-Employed',
+            description: 'Provided freelance services to various clients worldwide.',
+            image: 'https://source.unsplash.com/1600x900/?freelance'
         }
     ];
 
@@ -44,19 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const portfolio = [
         {
-            title: 'Project One',
-            description: 'Description of project one.',
-            image: 'path/to/project1.jpg'
+            title: 'E-commerce Platform',
+            description: 'Developed a full-stack e-commerce platform.',
+            image: 'https://source.unsplash.com/1600x900/?ecommerce'
         },
         {
-            title: 'Project Two',
-            description: 'Description of project two.',
-            image: 'path/to/project2.jpg'
+            title: 'Personal Blog',
+            description: 'Created a responsive personal blog with CMS integration.',
+            image: 'https://source.unsplash.com/1600x900/?blog'
         },
         {
-            title: 'Project Three',
-            description: 'Description of project three.',
-            image: 'path/to/project3.jpg'
+            title: 'Portfolio Website',
+            description: 'Designed and developed a dynamic portfolio website.',
+            image: 'https://source.unsplash.com/1600x900/?portfolio'
         }
     ];
 
