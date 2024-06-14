@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Software Engineer Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="styles.css">
@@ -46,12 +46,35 @@
         <section id="home" class="container-fluid text-center py-5" data-aos="fade-in"
             style="background-image: url('https://source.unsplash.com/1600x900/?space'); background-size: cover; color: white;">
             <h1>Welcome to My Portfolio</h1>
-            <p class="lead">Hi, I'm [Your Name], a Web Developer.</p>
+            <p class="lead">Hi, I'm [Your Name], a Software Engineer.</p>
         </section>
         <section id="about" class="container py-5" data-aos="fade-up">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula urna at urna sagittis, ut egestas
-                purus blandit. In hac habitasse platea dictumst.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim urna eu vestibulum. Fusce
+                        vel est vitae risus tincidunt semper. Nulla facilisi. Nunc venenatis posuere ex non dapibus.
+                        Aliquam erat volutpat. Mauris dignissim ultricies est, a ultricies risus placerat vel.</p>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5"
+                                placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
         </section>
         <section id="journey" class="container py-5" data-aos="fade-up">
             <h2>My Journey</h2>

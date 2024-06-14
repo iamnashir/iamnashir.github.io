@@ -1,3 +1,3 @@
 git add .
-git commit -m "Enhance design with colorful gradients, real images, and dynamic effects"
+git commit -m "Added dynamic content and form submission handling"
 git push origin main

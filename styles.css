@@ -30,11 +30,12 @@ section {
 #experience,
 #portfolio,
 #contact {
-    background: linear-gradient(135deg, #f06, #b2e);
+    background: linear-gradient(135deg, #1cb5e0, #000851);
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    padding: 20px;
 }
 
 .timeline {
@@ -47,7 +48,7 @@ section {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #b2e;
+    background-color: #1cb5e0;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -68,7 +69,7 @@ section {
     height: 25px;
     right: -17px;
     background-color: white;
-    border: 4px solid #b2e;
+    border: 4px solid #1cb5e0;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -93,62 +94,4 @@ section {
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
-}
-
-.timeline-item-left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
-.timeline-item-content {
-    padding: 20px;
-    background-color: white;
-    position: relative;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 600px) {
-    .timeline-item::after {
-        left: 60px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline-item-left,
-    .timeline-item-right {
-        left: 0%;
-    }
-
-    .timeline-item-right::before {
-        right: 15px;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-
-    .timeline-item-left::before {
-        left: 15px;
-        border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent white;
-    }
-}
-
-.card {
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
 }

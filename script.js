@@ -78,4 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         portfolioGallery.appendChild(card);
     });
+
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // For demonstration purposes, log the form data to console
+        console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+
+        // You can add further logic here, like sending the form data to a server
+        // using fetch or XMLHttpRequest.
+    });
 });
