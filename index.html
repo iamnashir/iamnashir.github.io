@@ -4,38 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Nashiruddin Ahmed</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="path/to/logo.png" alt="Logo" style="width: 40px; height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#journey">Journey</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
             </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm [Your Name], a [Your Profession]. Welcome to my portfolio!</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <!-- Project Items will be dynamically added here -->
         </div>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    </section>
-    <footer>
+    </header>
+    <main>
+        <section id="home" class="container-fluid text-center py-5">
+            <h1>Welcome to My Portfolio</h1>
+            <p class="lead">Hi, I'm [Your Name], a [Your Profession].</p>
+        </section>
+        <section id="about" class="container py-5">
+            <h2>About Me</h2>
+            <p>Information about you goes here.</p>
+        </section>
+        <section id="journey" class="container py-5">
+            <h2>My Journey</h2>
+            <div class="timeline">
+                <!-- Timeline items go here -->
+            </div>
+        </section>
+        <section id="experience" class="container py-5">
+            <h2>Experience</h2>
+            <div class="row" id="experience-cards">
+                <!-- Experience cards will be dynamically added here -->
+            </div>
+        </section>
+        <section id="contact" class="container py-5 text-center">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        </section>
+    </main>
+    <footer class="text-center py-4">
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 
