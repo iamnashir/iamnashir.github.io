@@ -95,3 +95,19 @@ section {
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
 }
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+.logo-icon {
+    width: 50px;
+    /* Adjust the size as needed */
+    height: 50px;
+    /* Adjust the size as needed */
+    margin-right: 10px;
+    /* Space between the icon and the text */
+}
