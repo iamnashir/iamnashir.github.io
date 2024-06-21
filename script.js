@@ -95,3 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // using fetch or XMLHttpRequest.
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const logoText = document.querySelector('.logo-text');
+  const text = 'Iam_Nashir';
+  let html = '';
+  for (let i = 0; i < text.length; i++) {
+    html += `<span style="animation-delay: ${i * 0.1}s;">${text[i]}</span>`;
+  }
+  logoText.innerHTML = html;
+});
