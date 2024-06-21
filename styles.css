@@ -97,112 +97,53 @@ section {
 }
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #343a40;
-    /* Dark background color */
-    padding: 0.75rem 1rem;
-    /* Padding for navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-}
-
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: #343a40;
-    /* Dark background color */
-    padding: 0.75rem 1rem;
-    /* Padding for navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
+  background-color: #343a40; /* Dark background color */
+  padding: 0.75rem 1rem; /* Padding for navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-brand img {
-    width: 40px;
-    /* Adjust size of the logo */
-    height: 40px;
-    /* Adjust size of the logo */
-    margin-right: 10px;
-    /* Space between the logo and the brand text */
-    transition: transform 0.3s ease;
-    /* Smooth transition for transform */
-}
-
-.navbar-brand:hover img {
-    transform: rotate(360deg);
-    /* Rotate the logo 360 degrees on hover */
+  width: 40px; /* Adjust size of the logo */
+  height: 40px; /* Adjust size of the logo */
+  margin-right: 10px; /* Space between the logo and the brand text */
 }
 
 .navbar-dark .navbar-brand {
-    font-size: 1.25rem;
-    /* Adjust font size */
-    font-weight: bold;
-    /* Bold text */
-    text-transform: uppercase;
-    /* Uppercase text */
-    position: relative;
-    /* Relative positioning for pseudo-element */
-    color: #ffffff;
-    /* White color for brand text */
-}
-
-.navbar-brand::before {
-    content: attr(data-text);
-    /* Use data-text attribute for content */
-    position: absolute;
-    left: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    color: #28a745;
-    /* Adjust color as needed */
-    transition: width 0.3s ease;
-    /* Smooth transition for width */
-}
-
-.navbar-brand:hover::before {
-    width: 100%;
-    /* Expand width on hover */
+  color: #ffffff; /* White color for brand text */
+  font-size: 1.25rem; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
 }
 
 /* Fixed-top positioning */
 .navbar.fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030;
-    /* Ensures navbar is above other content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030; /* Ensures navbar is above other content */
 }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 767.98px) {
-    .navbar-brand img {
-        width: 30px;
-        /* Adjust size for smaller screens */
-        height: 30px;
-        /* Adjust size for smaller screens */
-    }
+  .navbar-brand img {
+    width: 30px; /* Adjust size for smaller screens */
+    height: 30px; /* Adjust size for smaller screens */
+  }
 
-    .navbar-dark .navbar-brand {
-        font-size: 1rem;
-        /* Adjust font size for smaller screens */
-    }
+  .navbar-dark .navbar-brand {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
 }
