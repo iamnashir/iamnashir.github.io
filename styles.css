@@ -95,11 +95,69 @@ section {
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
 }
-.logo {
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40;
+    /* Dark background color */
+    padding: 0.75rem 1rem;
+    /* Padding for navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.navbar-brand {
     display: flex;
     align-items: center;
 }
-.logo img {
-    width: 100px;
-    height: 100px;
+
+.navbar-brand img {
+    width: 40px;
+    /* Adjust size of the logo */
+    height: 40px;
+    /* Adjust size of the logo */
+    margin-right: 10px;
+    /* Space between the logo and the brand text */
+}
+
+.navbar-dark .navbar-brand {
+    color: #ffffff;
+    /* White color for brand text */
+    font-size: 1.25rem;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Bold text */
+    text-transform: uppercase;
+    /* Uppercase text */
+}
+
+/* Fixed-top positioning */
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    /* Ensures navbar is above other content */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 767.98px) {
+    .navbar-brand img {
+        width: 30px;
+        /* Adjust size for smaller screens */
+        height: 30px;
+        /* Adjust size for smaller screens */
+    }
+
+    .navbar-dark .navbar-brand {
+        font-size: 1rem;
+        /* Adjust font size for smaller screens */
+    }
 }
