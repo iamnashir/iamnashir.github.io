@@ -194,65 +194,6 @@ body {
     position: relative;
 }
 
-.logo-text {
-    font-size: 2em;
-    font-weight: bold;
-    color: #ffffff;
-    position: relative;
-    display: inline-block;
-    transition: color 0.5s ease;
-}
-
-.logo-text::before,
-.logo-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    color: #ff007f;
-    /* Stylish color */
-    transition: transform 0.5s ease;
-    white-space: nowrap;
-}
-
-.logo-text::before {
-    z-index: 2;
-    text-shadow: -2px -2px 0 #ffffff, 2px 2px 0 #ff007f;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-.logo-text::after {
-    z-index: 1;
-    text-shadow: -2px -2px 0 #ff007f, 2px 2px 0 #ffffff;
-    transform: scaleX(0);
-    transform-origin: right;
-}
-
-.navbar-brand:hover .logo-text {
-    color: #ff007f;
-}
-
-.navbar-brand:hover .logo-text::before {
-    transform: scaleX(1);
-}
-
-.navbar-brand:hover .logo-text::after {
-    transform: scaleX(1);
-}
-
-.navbar-nav .nav-item .nav-link {
-    color: #ffffff;
-    /* Default link color */
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-item .nav-link:hover {
-    color: #ff007f;
-    /* Hover link color */
-}
 
 @keyframes colorChange {
     0% {
