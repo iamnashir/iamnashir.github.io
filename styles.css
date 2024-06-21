@@ -442,7 +442,7 @@ svg text {
     animation: stroke 10s infinite alternate;
     stroke-width: 2;
     stroke: #629BA9;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 @keyframes stroke {
