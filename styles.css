@@ -147,3 +147,43 @@ body {
     font-size: 1rem; /* Adjust font size for smaller screens */
   }
 }
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Icon */
+.logo-icon {
+    width: 50px;
+    /* Adjust the size as needed */
+    height: 50px;
+    /* Adjust the size as needed */
+    margin-right: 10px;
+    /* Space between the icon and the text */
+}
+
+/* Logo Text */
+.logo-text {
+    font-size: 24px;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #333;
+    /* Adjust the color as needed */
+    text-transform: uppercase;
+    /* Optional: Converts text to uppercase */
+}
+
+/* Example: Adding a shadow or additional styles */
+.logo-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle text shadow */
+    letter-spacing: 1px;
+    /* Adds spacing between letters */
+}
