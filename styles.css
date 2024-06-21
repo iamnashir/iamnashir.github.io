@@ -332,31 +332,7 @@ body {
     /* Hover text color */
 }
 
-@keyframes dropdownFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@import url("https://fonts.googleapis.com/css2?family=Gorditas&display=swap");
-
-svg {
-    font-family: "Gorditas", sans-serif;
-    width: 100%;
-    height: 100%;
-}
-
-svg text {
-    animation: stroke 10s infinite alternate;
-    stroke-width: 2;
-    stroke: #06655A;
-    font-size: 69px;
-}
 
 @keyframes stroke {
     0% {
@@ -414,7 +390,7 @@ svg text {
     animation: stroke 10s infinite alternate;
     stroke-width: 2;
     stroke: #555767;
-    font-size: 30px;
+    font-size: 50px;
 }
 
 @keyframes stroke {
