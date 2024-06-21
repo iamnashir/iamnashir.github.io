@@ -343,3 +343,52 @@ body {
         transform: translateY(0);
     }
 }
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap");
+
+svg {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+svg text {
+    animation: stroke 4s infinite alternate;
+    stroke-width: 2;
+    stroke: #09A08F;
+    font-size: 100px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(50, 192, 204, 0);
+        stroke: rgba(9, 160, 143, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(50, 192, 204, 0);
+        stroke: rgba(9, 160, 143, 1);
+    }
+
+    80% {
+        fill: rgba(50, 192, 204, 0);
+        stroke: rgba(9, 160, 143, 1);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgba(50, 192, 204, 1);
+        stroke: rgba(9, 160, 143, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+.wrapper {
+    background-color: #FFFFFF
+}
+
+;
