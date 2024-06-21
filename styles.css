@@ -112,55 +112,6 @@ body {
     /* Subtle shadow for depth */
 }
 
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand img {
-    width: 40px;
-    /* Adjust size of the logo */
-    height: 40px;
-    /* Adjust size of the logo */
-    margin-right: 10px;
-    /* Space between the logo and the brand text */
-}
-
-.navbar-dark .navbar-brand {
-    color: #ffffff;
-    /* White color for brand text */
-    font-size: 1.25rem;
-    /* Adjust font size */
-    font-weight: bold;
-    /* Bold text */
-    text-transform: uppercase;
-    /* Uppercase text */
-}
-
-/* Fixed-top positioning */
-.navbar.fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030;
-    /* Ensures navbar is above other content */
-}
-
-/* Media Query for Smaller Screens */
-@media (max-width: 767.98px) {
-    .navbar-brand img {
-        width: 30px;
-        /* Adjust size for smaller screens */
-        height: 30px;
-        /* Adjust size for smaller screens */
-    }
-
-    .navbar-dark .navbar-brand {
-        font-size: 1rem;
-        /* Adjust font size for smaller screens */
-    }
-}
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
@@ -181,8 +132,6 @@ body {
 .navbar-brand {
     display: flex;
     align-items: center;
-    position: relative;
-    /* Ensure relative positioning for pseudo-elements */
 }
 
 .navbar-brand img {
@@ -202,14 +151,35 @@ body {
 }
 
 .navbar-dark .navbar-brand {
-    color: #ffffff;
-    /* White color for brand text */
     font-size: 1.25rem;
     /* Adjust font size */
     font-weight: bold;
     /* Bold text */
     text-transform: uppercase;
     /* Uppercase text */
+    position: relative;
+    /* Relative positioning for pseudo-element */
+    color: #ffffff;
+    /* White color for brand text */
+}
+
+.navbar-brand::before {
+    content: attr(data-text);
+    /* Use data-text attribute for content */
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    color: #28a745;
+    /* Adjust color as needed */
+    transition: width 0.3s ease;
+    /* Smooth transition for width */
+}
+
+.navbar-brand:hover::before {
+    width: 100%;
+    /* Expand width on hover */
 }
 
 /* Fixed-top positioning */
