@@ -129,23 +129,6 @@ body {
     /* Subtle shadow for depth */
 }
 
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: #343a40;
-    /* Dark background color */
-    padding: 0.75rem 1rem;
-    /* Padding for navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-}
-
 .navbar-brand {
     display: flex;
     align-items: center;
@@ -174,40 +157,29 @@ body {
     /* Bold text */
     text-transform: uppercase;
     /* Uppercase text */
-    color: #ffffff;
-    /* White color for brand text */
     position: relative;
     /* Relative positioning for pseudo-element */
+    color: #ffffff;
+    /* White color for brand text */
 }
 
-.navbar-brand .logo-text {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.logo-text::before {
+.navbar-brand::before {
     content: attr(data-text);
+    /* Use data-text attribute for content */
     position: absolute;
-    top: 0;
     left: 0;
+    overflow: hidden;
+    white-space: nowrap;
     width: 0;
     color: #28a745;
     /* Adjust color as needed */
-    white-space: nowrap;
-    overflow: hidden;
-    animation: revealText 2s steps(10, end);
-    /* Adjust animation duration and steps as needed */
+    transition: width 0.3s ease;
+    /* Smooth transition for width */
 }
 
-@keyframes revealText {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
+.navbar-brand:hover::before {
+    width: 100%;
+    /* Expand width on hover */
 }
 
 /* Fixed-top positioning */
