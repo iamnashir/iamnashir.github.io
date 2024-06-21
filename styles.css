@@ -253,3 +253,120 @@ body {
     color: #ff007f;
     /* Hover link color */
 }
+
+@keyframes colorChange {
+    0% {
+        background-color: rgba(255, 87, 51, 0.8);
+    }
+
+    /* Orange */
+    25% {
+        background-color: rgba(51, 255, 87, 0.8);
+    }
+
+    /* Green */
+    50% {
+        background-color: rgba(51, 87, 255, 0.8);
+    }
+
+    /* Blue */
+    75% {
+        background-color: rgba(255, 51, 161, 0.8);
+    }
+
+    /* Pink */
+    100% {
+        background-color: rgba(255, 87, 51, 0.8);
+    }
+
+    /* Orange */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Initial background */
+    animation: colorChange 15s infinite;
+    /* Applying the animation */
+    transition: background-color 0.5s ease;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 1);
+    /* Solid background on hover */
+}
+
+.navbar-brand {
+    position: relative;
+}
+
+.logo-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    transition: color 0.5s ease;
+}
+
+.logo-text::before,
+.logo-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    color: #ff007f;
+    /* Stylish color */
+    transition: transform 0.5s ease;
+    white-space: nowrap;
+}
+
+.logo-text::before {
+    z-index: 2;
+    text-shadow: -2px -2px 0 #ffffff, 2px 2px 0 #ff007f;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.logo-text::after {
+    z-index: 1;
+    text-shadow: -2px -2px 0 #ff007f, 2px 2px 0 #ffffff;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.navbar-brand:hover .logo-text {
+    color: #ff007f;
+}
+
+.navbar-brand:hover .logo-text::before {
+    transform: scaleX(1);
+}
+
+.navbar-brand:hover .logo-text::after {
+    transform: scaleX(1);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    /* Default link color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff007f;
+    /* Hover link color */
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
+}
