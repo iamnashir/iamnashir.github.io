@@ -430,3 +430,47 @@ svg text {
         stroke-width: 0;
     }
 }
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+
+svg {
+    font-family: "Oxanium", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+svg text {
+    animation: stroke 10s infinite alternate;
+    stroke-width: 2;
+    stroke: #629BA9;
+    font-size: 50px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(30, 99, 204, 0);
+        stroke: rgba(98, 155, 169, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(30, 99, 204, 0);
+        stroke: rgba(98, 155, 169, 1);
+    }
+
+    80% {
+        fill: rgba(30, 99, 204, 0);
+        stroke: rgba(98, 155, 169, 1);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgba(30, 99, 204, 1);
+        stroke: rgba(98, 155, 169, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
