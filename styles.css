@@ -194,7 +194,7 @@ body {
     position: relative;
 }
 
-
+/* Keyframes for color changing background */
 @keyframes colorChange {
     0% {
         background-color: rgba(255, 87, 51, 0.8);
@@ -229,19 +229,22 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-.navbar {
+.curved-navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 70px;
     background-color: rgba(0, 0, 0, 0.8);
     /* Initial background */
     animation: colorChange 15s infinite;
     /* Applying the animation */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 0 20px;
     transition: background-color 0.5s ease;
 }
 
-.navbar:hover {
+.curved-navbar:hover {
     background-color: rgba(0, 0, 0, 1);
     /* Solid background on hover */
 }
@@ -303,6 +306,7 @@ body {
     color: #ffffff;
     /* Default link color */
     transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0 10px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -310,4 +314,6 @@ body {
     /* Hover link color */
     transform: scale(1.1);
     /* Slightly enlarge on hover */
+    text-decoration: underline;
+    /* Underline on hover */
 }
