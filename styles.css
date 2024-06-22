@@ -1,77 +1,40 @@
-/* styles.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Custom styles */
 body {
-    transition: background-color 0.3s, color 0.3s;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent black */
-    backdrop-filter: blur(10px);
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
 }
 
-.nav-link {
-    color: rgba(255, 255, 255, 0.7);
-    transition: color 0.3s;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.nav-link:hover {
-    color: #00ffff;
-    /* Cyan */
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-#sidebar {
-    width: 250px;
-    height: 100%;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
-#theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
+section {
+    padding: 2rem 0;
+    text-align: center;
 }
 
-#theme-toggle i {
-    transition: color 0.3s;
-}
-
-footer a {
-    transition: color 0.3s;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-footer a:hover {
-    color: #00ffff;
-    /* Cyan */
-}
-
-.text-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 400px;
-}
-
-.text-card .text-5xl {
-    font-size: 3rem;
-    /* Adjust as needed */
-}
-
-.text-card .text-2xl {
-    font-size: 1.5rem;
-    /* Adjust as needed */
-}
-
-footer .bx {
-    font-size: 2rem;
-    /* Adjust as needed */
-}
-
-.glow-effect:hover {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
-    /* Cyan glow */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
 }

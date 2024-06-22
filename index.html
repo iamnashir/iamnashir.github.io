@@ -4,93 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nashiruddin Ahmed Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-    <!-- Navbar -->
-    <header class="fixed w-full z-10 bg-transparent backdrop-filter backdrop-blur-lg">
-        <div class="container mx-auto flex justify-between items-center p-5">
-            <div class="text-2xl font-bold text-white">Nashir</div>
-            <nav class="hidden md:flex space-x-6">
-                <ul class="flex space-x-6">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#journey" class="nav-link">Journey</a></li>
-                    <li><a href="#experience" class="nav-link">Job Experience</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#resume" class="nav-link">Download Resume</a></li>
-                    <li><a href="#contact" class="nav-link">Contact Me</a></li>
-                </ul>
-            </nav>
-            <div class="md:hidden">
-                <button id="menu-toggle" class="focus:outline-none">
-                    <i class='bx bx-menu text-3xl text-white'></i>
-                </button>
-            </div>
-            <button id="theme-toggle" class="focus:outline-none ml-4">
-                <i id="theme-icon" class='bx bx-sun text-3xl text-white'></i>
-            </button>
-        </div>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Sidebar -->
-    <nav id="sidebar"
-        class="fixed inset-0 bg-gray-800 text-white z-20 transform -translate-x-full transition-transform md:hidden">
-        <div class="flex justify-between items-center p-5">
-            <div class="text-2xl font-bold">Nashir</div>
-            <button id="close-sidebar" class="focus:outline-none">
-                <i class='bx bx-x text-3xl'></i>
-            </button>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Brief introduction about yourself.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title</h3>
+            <p>Description of the project.</p>
         </div>
-        <ul class="space-y-6 px-5">
-            <li><a href="#home" class="block nav-link">Home</a></li>
-            <li><a href="#journey" class="block nav-link">Journey</a></li>
-            <li><a href="#experience" class="block nav-link">Job Experience</a></li>
-            <li><a href="#projects" class="block nav-link">Projects</a></li>
-            <li><a href="#resume" class="block nav-link">Download Resume</a></li>
-            <li><a href="#contact" class="block nav-link">Contact Me</a></li>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
         </ul>
-    </nav>
+    </section>
 
-    <!-- Content -->
-    <main class="pt-24">
-        <!-- Home Section -->
-        <section id="home" class="h-screen flex items-center justify-center">
-            <div class="flex flex-col md:flex-row items-center justify-center">
-                <div class="text-card p-6 m-4">
-                    <div class="text-5xl font-bold mb-4">
-                        Hi, I am Nashiruddin Ahmed
-                    </div>
-                    <div class="text-2xl mb-8">
-                        Software Engineer
-                    </div>
-                </div>
-                <div class="relative w-72 h-72 m-4 overflow-hidden rounded-full">
-                    <img src="../iamnashir.github.io/Image/photo 01.png" alt="Nashiruddin Ahmed"
-                        class="w-full h-full object-cover rounded-full">
-                </div>
-            </div>
-        </section>
-        <!-- Other sections... -->
-    </main>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div>&copy; 2024 Nashiruddin Ahmed</div>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:glow-effect"><i class='bx bxl-instagram text-2xl'></i></a>
-                <a href="#" class="hover:glow-effect"><i class='bx bxl-linkedin text-2xl'></i></a>
-                <a href="#" class="hover:glow-effect"><i class='bx bxl-facebook text-2xl'></i></a>
-                <a href="#" class="hover:glow-effect"><i class='bx bxl-github text-2xl'></i></a>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
