@@ -12,18 +12,12 @@ header {
     background: transparent;
 }
 
-header nav ul li a {
-    transition: color 0.3s;
+.nav-link {
     color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s, box-shadow 0.3s;
 }
 
-.hover\:glow-effect {
-    transition: box-shadow 0.3s, color 0.3s;
-}
-
-.hover\:glow-effect:hover {
-    position: relative;
-    z-index: 1;
+.nav-link:hover {
     box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
     color: #fbbf24;
 }
