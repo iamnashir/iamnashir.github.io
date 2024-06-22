@@ -101,18 +101,17 @@ body {
   margin: 0;
   padding: 0;
 }
-
 /* General styles */
 body {
-    padding-top: 30px;
+    padding-top: 60px;
     /* Adjust this value if your navbar height is different */
 }
 
 /* Navbar styles */
 .curved-navbar {
-    border-radius: 0px;
-    background: linear-gradient(0deg, #1b1b2f, #162447, #1f4068, #1b1b2f);
-    padding: 0px 0px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #1b1b2f, #162447, #1f4068, #1b1b2f);
+    padding: 10px 20px;
 }
 
 .navbar-brand .wrapper svg text {
@@ -153,7 +152,7 @@ body {
 .curved-navbar {
     width: auto;
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 1200px;
 }
 
 /* Responsive styles */
