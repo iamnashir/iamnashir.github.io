@@ -27,20 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'dark');
         }
     });
-
     // Sidebar toggle
-    menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('-translate-x-full');
-    });
+menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('-translate-x-full');
+});
 
-    closeSidebar.addEventListener('click', () => {
+closeSidebar.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+});
+
+// Close sidebar on link click
+document.querySelectorAll('#sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
         sidebar.classList.add('-translate-x-full');
-    });
-
-    // Close sidebar on link click
-    document.querySelectorAll('#sidebar a').forEach(link => {
-        link.addEventListener('click', () => {
-            sidebar.classList.add('-translate-x-full');
-        });
     });
 });
