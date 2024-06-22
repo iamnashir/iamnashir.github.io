@@ -12,15 +12,11 @@ header nav ul li a {
     transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    color: #fbbf24;
-    /* Tailwind yellow-500 */
-}
-
-.hover:glow-effect:hover {
+.hover\:glow-effect:hover {
     position: relative;
     z-index: 1;
     box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
+    color: #fbbf24;
 }
 
 #sidebar {
@@ -38,7 +34,12 @@ header nav ul li a:hover {
     transition: color 0.3s;
 }
 
+footer a {
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
 footer a:hover {
     color: #fbbf24;
     /* Tailwind yellow-500 */
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
 }
