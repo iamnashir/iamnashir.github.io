@@ -110,9 +110,9 @@ body {
 
 /* Navbar styles */
 .curved-navbar {
-    border-radius: 10px;
-    background: linear-gradient(45deg, #1b1b2f, #162447, #1f4068, #1b1b2f);
-    padding: 10px 20px;
+    border-radius: 0px;
+    background: linear-gradient(0deg, #1b1b2f, #162447, #1f4068, #1b1b2f);
+    padding: 0px 0px;
 }
 
 .navbar-brand .wrapper svg text {
@@ -153,7 +153,7 @@ body {
 .curved-navbar {
     width: auto;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 600px;
 }
 
 /* Responsive styles */
