@@ -8,8 +8,17 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+header {
+    background: transparent;
+}
+
 header nav ul li a {
     transition: color 0.3s;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hover\:glow-effect {
+    transition: box-shadow 0.3s, color 0.3s;
 }
 
 .hover\:glow-effect:hover {
@@ -36,6 +45,7 @@ header nav ul li a {
 
 footer a {
     transition: color 0.3s, box-shadow 0.3s;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 footer a:hover {
