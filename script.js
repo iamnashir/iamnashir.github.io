@@ -9,25 +9,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize theme based on local storage
     if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark');
-        themeIcon.classList.replace('bx-sun', 'bx-moon');
-    } else {
+        body.classList.add('dark’);
+themeIcon.classList.replace(‘bx-sun’, ‘bx-moon’);
+} else {
+body.classList.remove(‘dark’);
+themeIcon.classList.replace(‘bx-moon’, ‘bx-sun’);
+    }
+themeToggle.addEventListener('click', () => {
+    if (body.classList.contains('dark')) {
         body.classList.remove('dark');
         themeIcon.classList.replace('bx-moon', 'bx-sun');
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.classList.add('dark');
+        themeIcon.classList.replace('bx-sun', 'bx-moon');
+        localStorage.setItem('theme', 'dark');
     }
+});
 
-    themeToggle.addEventListener('click', () => {
-        if (body.classList.contains('dark')) {
-            body.classList.remove('dark');
-            themeIcon.classList.replace('bx-moon', 'bx-sun');
-            localStorage.setItem('theme', 'light');
-        } else {
-            body.classList.add('dark');
-            themeIcon.classList.replace('bx-sun', 'bx-moon');
-            localStorage.setItem('theme', 'dark');
-        }
-    });
-    // Sidebar toggle
+// Sidebar toggle
 menuToggle.addEventListener('click', () => {
     sidebar.classList.toggle('-translate-x-full');
 });

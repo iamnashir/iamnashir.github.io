@@ -10,6 +10,7 @@ body {
 
 header {
     background: transparent;
+    backdrop-filter: blur(10px);
 }
 
 .nav-link {
@@ -18,8 +19,9 @@ header {
 }
 
 .nav-link:hover {
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
-    color: #fbbf24;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    /* Cyan glow */
+    color: #00ffff;
 }
 
 #sidebar {
@@ -43,9 +45,10 @@ footer a {
 }
 
 footer a:hover {
-    color: #fbbf24;
-    /* Tailwind yellow-500 */
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
+    color: #00ffff;
+    /* Cyan */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    /* Cyan glow */
 }
 
 .glow-effect {
@@ -53,18 +56,26 @@ footer a:hover {
 }
 
 .glow-effect:hover {
-    box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+    /* Cyan glow */
+}
+
+.text-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .animated-text {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    animation: textFadeIn 10s infinite;
 }
 
 .word {
     opacity: 0;
-    animation: fadeIn 0.5s forwards;
+    animation: fadeIn 1s forwards;
 }
 
 .word:nth-child(1) {
@@ -72,23 +83,36 @@ footer a:hover {
 }
 
 .word:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-.word:nth-child(3) {
     animation-delay: 1s;
 }
 
+.word:nth-child(3) {
+    animation-delay: 2s;
+}
+
 .word:nth-child(4) {
-    animation-delay: 1.5s;
+    animation-delay: 3s;
 }
 
 .word:nth-child(5) {
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 @keyframes fadeIn {
     to {
+        opacity: 1;
+    }
+}
+
+@keyframes textFadeIn {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    10%,
+    90% {
         opacity: 1;
     }
 }
