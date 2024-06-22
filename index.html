@@ -4,161 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to MyPortfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <title>Nashiruddin Ahmed Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-<header class="navbar navbar-expand-lg fixed-top curved-navbar">
-    <a class="navbar-brand" href="#">
-        <div class="wrapper">
-            <svg>
-                <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-                    IAM_NASHIR
-                </text>
-            </svg>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Navbar -->
+    <header class="bg-gray-800 text-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <div class="text-2xl font-bold">Nashir</div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
+                    <li><a href="#journey" class="hover:text-yellow-500">Journey</a></li>
+                    <li><a href="#experience" class="hover:text-yellow-500">Job Experience</a></li>
+                    <li><a href="#projects" class="hover:text-yellow-500">Projects</a></li>
+                    <li><a href="#resume" class="hover:text-yellow-500">Download Resume</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-500">Contact Me</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="focus:outline-none">
+                <span id="theme-icon" class="material-icons">wb_sunny</span>
+            </button>
         </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#journey">Journey</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
-</header>
+    </header>
 
+    <!-- Sections -->
+    <section id="home" class="h-screen flex items-center justify-center">
+        <h1 class="text-5xl">Welcome to My Portfolio</h1>
+    </section>
+    <section id="journey" class="py-20 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8">My Journey</h2>
+            <!-- Journey content -->
+        </div>
+    </section>
+    <section id="experience" class="py-20">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8">Job Experience</h2>
+            <!-- Experience content -->
+        </div>
+    </section>
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8">Projects</h2>
+            <!-- Projects content -->
+        </div>
+    </section>
+    <section id="resume" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Download Resume</h2>
+            <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-full hover:bg-yellow-600">Download Resume</a>
+        </div>
+    </section>
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
+            <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label class="block text-gray-700">Name</label>
+                    <input type="text"
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Email</label>
+                    <input type="email"
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Message</label>
+                    <textarea
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
 
-    <main>
-        <section id="home" class="container-fluid text-center py-5" data-aos="fade-in"
-            style="background-image: url('https://images.unsplash.com/photo-1581472723648-909f4851d4ae?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8ODIxNjI0MDd8fGVufDB8fHx8fA%3D%3D'); background-size: cover; color: white;">
-            <div class="wrapper">
-                <svg>
-                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-                        Welcome to My Portfolio
-                    </text>
-                </svg>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between">
+            <div>&copy; 2024 Nashiruddin Ahmed</div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-yellow-500">Instagram</a>
+                <a href="#" class="hover:text-yellow-500">LinkedIn</a>
+                <a href="#" class="hover:text-yellow-500">Facebook</a>
+                <a href="#" class="hover:text-yellow-500">Github</a>
             </div>
-            <div class="wrapper">
-                <svg>
-                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-                        I am Nashiruddin Ahmed
-                    </text>
-                </svg>
-            </div>
-        </section>
-        <section id="about" class="container py-5" data-aos="fade-up">
-            <h2>About Me</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim urna eu vestibulum. Fusce
-                        vel est vitae risus tincidunt semper. Nulla facilisi. Nunc venenatis posuere ex non dapibus.
-                        Aliquam erat volutpat. Mauris dignissim ultricies est, a ultricies risus placerat vel.</p>
-                </div>
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="5"
-                                placeholder="Enter your message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <section id="journey" class="container py-5" data-aos="fade-up">
-            <h2>My Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item timeline-item-left" data-aos="fade-right">
-                    <div class="timeline-item-content">
-                        <h3>2015</h3>
-                        <p>Started my journey in web development.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item-right" data-aos="fade-left">
-                    <div class="timeline-item-content">
-                        <h3>2018</h3>
-                        <p>Worked at Company ABC.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item-left" data-aos="fade-right">
-                    <div class="timeline-item-content">
-                        <h3>2020</h3>
-                        <p>Joined Company XYZ as a Senior Developer.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item-right" data-aos="fade-left">
-                    <div class="timeline-item-content">
-                        <h3>2022</h3>
-                        <p>Started my freelance career.</p>
-                        <span class="circle"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="experience" class="container py-5">
-            <h2 data-aos="fade-up">Experience</h2>
-            <div class="row" id="experience-cards">
-                <!-- Experience cards will be dynamically added here -->
-            </div>
-        </section>
-        <section id="portfolio" class="container py-5" data-aos="fade-up">
-            <h2>Portfolio</h2>
-            <div class="row" id="portfolio-gallery">
-                <!-- Portfolio items will be dynamically added here -->
-            </div>
-        </section>
-        <section id="contact" class="container py-5 text-center" data-aos="fade-up">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-        </section>
-    </main>
-    <footer class="text-center py-4">
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 

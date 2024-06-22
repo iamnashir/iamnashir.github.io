@@ -1,115 +1,27 @@
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
-    AOS.init();
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
 
-    const experience = [
-        {
-            title: 'Software Engineer',
-            company: 'Tech Solutions',
-            description: 'Developed web applications and improved user interfaces.',
-            image: 'https://source.unsplash.com/1600x900/?tech'
-        },
-        {
-            title: 'Senior Developer',
-            company: 'Innovative Startups',
-            description: 'Led a team of developers and worked on cutting-edge technologies.',
-            image: 'https://source.unsplash.com/1600x900/?coding'
-        },
-        {
-            title: 'Freelancer',
-            company: 'Self-Employed',
-            description: 'Provided freelance services to various clients worldwide.',
-            image: 'https://source.unsplash.com/1600x900/?freelance'
+    // Initialize theme based on local storage
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark');
+        themeIcon.textContent = 'nightlight_round';
+    } else {
+        body.classList.remove('dark');
+        themeIcon.textContent = 'wb_sunny';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark')) {
+            body.classList.remove('dark');
+            themeIcon.textContent = 'wb_sunny';
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.classList.add('dark');
+            themeIcon.textContent = 'nightlight_round';
+            localStorage.setItem('theme', 'dark');
         }
-    ];
-
-    const experienceCards = document.getElementById('experience-cards');
-
-    experience.forEach(job => {
-        const card = document.createElement('div');
-        card.classList.add('col-md-4', 'mb-4');
-
-        card.innerHTML = `
-            <div class="card h-100" data-aos="flip-left">
-                <img src="${job.image}" class="card-img-top" alt="${job.title}">
-                <div class="card-body">
-                    <h5 class="card-title">${job.title}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">${job.company}</h6>
-                    <p class="card-text">${job.description}</p>
-                </div>
-            </div>
-        `;
-
-        experienceCards.appendChild(card);
-    });
-
-    const portfolio = [
-        {
-            title: 'E-commerce Platform',
-            description: 'Developed a full-stack e-commerce platform.',
-            image: 'https://source.unsplash.com/1600x900/?ecommerce'
-        },
-        {
-            title: 'Personal Blog',
-            description: 'Created a responsive personal blog with CMS integration.',
-            image: 'https://source.unsplash.com/1600x900/?blog'
-        },
-        {
-            title: 'Portfolio Website',
-            description: 'Designed and developed a dynamic portfolio website.',
-            image: 'https://source.unsplash.com/1600x900/?portfolio'
-        }
-    ];
-
-    const portfolioGallery = document.getElementById('portfolio-gallery');
-
-    portfolio.forEach(project => {
-        const card = document.createElement('div');
-        card.classList.add('col-md-4', 'mb-4');
-
-        card.innerHTML = `
-            <div class="card h-100" data-aos="zoom-in">
-                <img src="${project.image}" class="card-img-top" alt="${project.title}">
-                <div class="card-body">
-                    <h5 class="card-title">${project.title}</h5>
-                    <p class="card-text">${project.description}</p>
-                </div>
-            </div>
-        `;
-
-        portfolioGallery.appendChild(card);
-    });
-
-    const form = document.getElementById('contact-form');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        // For demonstration purposes, log the form data to console
-        console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
-
-        // You can add further logic here, like sending the form data to a server
-        // using fetch or XMLHttpRequest.
     });
 });
-document.addEventListener("DOMContentLoaded", function() {
-    // Get all the nav-item elements
-    const navItems = document.querySelectorAll('.navbar-nav .nav-item');
-
-    // Loop through each nav-item
-    navItems.forEach(function(item, index) {
-        // Add a click event listener to each nav-item
-        item.addEventListener('click', function() {
-            // Get the corresponding link inside the nav-item
-            const link = item.querySelector('.nav-link');
-            if (link) {
-                // Trigger a click on the link to navigate
-                link.click();
-            }
-        });
-    });
-});
-       

@@ -1,233 +1,38 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-    margin-bottom: 20px;
+header nav ul li a {
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #fbbf24;
+    /* Tailwind yellow-500 */
 }
 
 section {
-    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-#home {
-    color: #fff;
-    padding: 100px 0;
-    background-size: cover;
-    background-position: center;
-}
-
-#home h1 {
-    font-size: 4em;
-}
-
-#about,
-#journey,
-#experience,
-#portfolio,
-#contact {
-    background: linear-gradient(135deg, #1cb5e0, #000851);
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #1cb5e0;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #1cb5e0;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.timeline-item-left {
-    left: 0;
-}
-
-.timeline-item-right {
-    left: 50%;
-}
-
-.timeline-item-right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-/* General styles */
-body {
-    padding-top: 60px;
-}
-
-/* Navbar styles */
-.curved-navbar {
-    width: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9));
-    padding: 10px 20px;
-    box-shadow: 0 4px 2px -2px gray;
-    backdrop-filter: blur(10px);
-    /* Adds a blur effect to the background */
-}
-
-.navbar-brand .wrapper svg text {
-    font-family: 'Arial', sans-serif;
-    font-size: 1.25rem;
-    fill: #000;
-    text-transform: uppercase;
-}
-
-.nav-link {
-    color: #000 !important;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding: 5px 10px;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #74c0fc !important;
-    border-bottom: 2px solid #74c0fc;
-}
-
-.navbar-toggler {
-    border-color: transparent;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar-collapse {
-    justify-content: flex-end;
-}
-
-/* Responsive styles */
-@media (max-width: 991.98px) {
-    .navbar-nav {
-        text-align: center;
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item {
-        display: block;
-        width: 100%;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .navbar-nav .nav-link {
-        display: none;
-    }
-
-    .navbar-nav .nav-item::before {
-        content: "\1F4DC";
-        /* Default icon for nav items */
-        font-size: 1.5rem;
-        display: block;
-        margin: 0 auto;
-        color: #000;
-    }
-
-    .navbar-nav .nav-item:nth-child(1)::before {
-        content: "\1F3E0";
-    }
-
-    /* Home icon */
-    .navbar-nav .nav-item:nth-child(2)::before {
-        content: "\1F464";
-    }
-
-    /* About icon */
-    .navbar-nav .nav-item:nth-child(3)::before {
-        content: "\1F4DA";
-    }
-
-    /* Journey icon */
-    .navbar-nav .nav-item:nth-child(4)::before {
-        content: "\1F4BB";
-    }
-
-    /* Experience icon */
-    .navbar-nav .nav-item:nth-child(5)::before {
-        content: "\1F4D6";
-    }
-
-    /* Portfolio icon */
-    .navbar-nav .nav-item:nth-child(6)::before {
-        content: "\1F4E9";
-    }
-
-    /* Contact icon */
-}
-
-/* Ensure the logo is properly aligned */
-.navbar-brand {
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-}
-
-/* Additional enhancements */
-.search-bar {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.search-bar input {
+button#theme-toggle {
+    background: none;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.search-bar input:focus {
-    outline: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+button#theme-toggle span.material-icons {
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fbbf24;
+    /* Tailwind yellow-500 */
 }
