@@ -33,13 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('-translate-x-full');
     });
 
-    closeSidebar.addEventListener('click', ()=> {
-sidebar.classList.add(’-translate-x-full’);
-    });
-// Close sidebar on link click
-document.querySelectorAll('#sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
+    closeSidebar.addEventListener('click', () => {
         sidebar.classList.add('-translate-x-full');
     });
-});
+
+    // Close sidebar on link click
+    document.querySelectorAll('#sidebar a').forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+        });
+    });
 });
