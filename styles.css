@@ -103,17 +103,17 @@ body {
 }
 /* General styles */
 body {
-    padding-top: 56px;
-    /* Adjust this value if your navbar height is different */
+    padding-top: 60px;
 }
 
 /* Navbar styles */
 .curved-navbar {
     width: 100%;
-    background-color: white;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9));
     padding: 10px 20px;
     box-shadow: 0 4px 2px -2px gray;
-    /* Optional: to give a slight shadow */
+    backdrop-filter: blur(10px);
+    /* Adds a blur effect to the background */
 }
 
 .navbar-brand .wrapper svg text {
@@ -125,12 +125,14 @@ body {
 
 .nav-link {
     color: #000 !important;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
     padding: 5px 10px;
+    position: relative;
 }
 
 .nav-link:hover {
     color: #74c0fc !important;
+    border-bottom: 2px solid #74c0fc;
 }
 
 .navbar-toggler {
@@ -209,4 +211,23 @@ body {
     margin-right: auto;
     display: flex;
     align-items: center;
+}
+
+/* Additional enhancements */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.search-bar input {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
