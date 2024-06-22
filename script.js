@@ -1,46 +1,39 @@
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const body = document.body;
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const closeSidebar = document.getElementById('close-sidebar');
-
-    // Initialize theme based on local storage
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark');
-        themeIcon.classList.replace('bx-sun', 'bx-moon');
-    } else {
-        body.classList.remove('dark');
-        themeIcon.classList.replace('bx-moon', 'bx-sun');
-    }
-
-    themeToggle.addEventListener('click', () => {
-        if (body.classList.contains('dark')) {
-            body.classList.remove('dark');
-            themeIcon.classList.replace('bx-moon', 'bx-sun');
-            localStorage.setItem('theme', 'light');
-        } else {
-            body.classList.add('dark');
-            themeIcon.classList.replace('bx-sun', 'bx-moon');
-            localStorage.setItem('theme', 'dark');
-        }
-    });
-
-    // Sidebar toggle
-    menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('-translate-x-full');
-    });
-
-    closeSidebar.addEventListener('click', () => {
-        sidebar.classList.add('-translate-x-full');
-    });
-
-    // Close sidebar on link click
-    document.querySelectorAll('#sidebar a').forEach(link => {
-        link.addEventListener('click', () => {
-            sidebar.classList.add('-translate-x-full');
+// Smooth Scrolling
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
+});
+
+// Form Validation
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let valid = true;
+
+    if (name === '') {
+        alert('Name is required');
+        valid = false;
+    }
+
+    if (email === '') {
+        alert('Email is required');
+        valid = false;
+    } else {
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address');
+            valid = false;
+        }
+    }
+
+    if (valid) {
+        alert('Form submitted successfully!');
+        // You can add code here to send form data to a server if needed
+    }
 });
