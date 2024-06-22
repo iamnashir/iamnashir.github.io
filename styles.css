@@ -111,19 +111,22 @@ body {
 /* Navbar styles */
 .curved-navbar {
     border-radius: 10px;
-    background: linear-gradient(45deg, #ff6b6b, #f06595, #74c0fc, #63e6be);
+    background: linear-gradient(45deg, #2c3e50, #4c5c68, #34495e, #2e4053);
+    padding: 10px 15px;
 }
 
 .navbar-brand .wrapper svg text {
     font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     fill: white;
+    text-transform: uppercase;
 }
 
 .nav-link {
     color: white !important;
     position: relative;
     transition: all 0.3s ease;
+    padding: 5px 10px;
 }
 
 .nav-link::before {
@@ -149,5 +152,11 @@ body {
 @media (max-width: 991.98px) {
     .navbar-nav {
         text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        width: 100%;
     }
 }

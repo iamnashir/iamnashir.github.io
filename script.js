@@ -95,3 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // using fetch or XMLHttpRequest.
     });
 });
+        // Ensure all navbar items are visible when collapsed
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarNav = document.querySelector('#navbarNav');
+            
+            navbarToggler.addEventListener('click', function() {
+                if (navbarNav.classList.contains('show')) {
+                    navbarNav.classList.remove('show');
+                } else {
+                    navbarNav.classList.add('show');
+                }
+            });
+        });
