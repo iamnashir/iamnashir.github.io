@@ -95,17 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
         // using fetch or XMLHttpRequest.
     });
 });
-        // Ensure all navbar items are visible when collapsed
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbarToggler = document.querySelector('.navbar-toggler');
-            const navbarNav = document.querySelector('#navbarNav');
-            
-            navbarToggler.addEventListener('click', function() {
-                if (navbarNav.classList.contains('show')) {
-                    navbarNav.classList.remove('show');
-                } else {
-                    navbarNav.classList.add('show');
-                }
-            });
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all the nav-item elements
+    const navItems = document.querySelectorAll('.navbar-nav .nav-item');
+
+    // Loop through each nav-item
+    navItems.forEach(function(item, index) {
+        // Add a click event listener to each nav-item
+        item.addEventListener('click', function() {
+            // Get the corresponding link inside the nav-item
+            const link = item.querySelector('.nav-link');
+            if (link) {
+                // Trigger a click on the link to navigate
+                link.click();
+            }
         });
+    });
+});
        
