@@ -109,20 +109,23 @@ body {
 
 /* Navbar styles */
 .curved-navbar {
-    background-color: #1b1b2f;
-    padding: 10px 15px;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 2px -2px gray;
+    /* Optional: to give a slight shadow */
 }
 
 .navbar-brand .wrapper svg text {
     font-family: 'Arial', sans-serif;
     font-size: 1.25rem;
-    fill: white;
+    fill: #000;
     text-transform: uppercase;
 }
 
 .nav-link {
-    color: white !important;
-    transition: all 0.3s ease;
+    color: #000 !important;
+    transition: color 0.3s ease;
     padding: 5px 10px;
 }
 
@@ -130,11 +133,16 @@ body {
     color: #74c0fc !important;
 }
 
-/* Center the navbar and reduce width */
-.curved-navbar {
-    width: auto;
-    margin: 0 auto;
-    max-width: 1200px;
+.navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
 }
 
 /* Responsive styles */
@@ -148,4 +156,57 @@ body {
         display: block;
         width: 100%;
     }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-nav .nav-link {
+        display: none;
+    }
+
+    .navbar-nav .nav-item::before {
+        content: "\1F4DC";
+        /* Default icon for nav items */
+        font-size: 1.5rem;
+        display: block;
+        margin: 0 auto;
+        color: #000;
+    }
+
+    .navbar-nav .nav-item:nth-child(1)::before {
+        content: "\1F3E0";
+    }
+
+    /* Home icon */
+    .navbar-nav .nav-item:nth-child(2)::before {
+        content: "\1F464";
+    }
+
+    /* About icon */
+    .navbar-nav .nav-item:nth-child(3)::before {
+        content: "\1F4DA";
+    }
+
+    /* Journey icon */
+    .navbar-nav .nav-item:nth-child(4)::before {
+        content: "\1F4BB";
+    }
+
+    /* Experience icon */
+    .navbar-nav .nav-item:nth-child(5)::before {
+        content: "\1F4D6";
+    }
+
+    /* Portfolio icon */
+    .navbar-nav .nav-item:nth-child(6)::before {
+        content: "\1F4E9";
+    }
+
+    /* Contact icon */
+}
+
+/* Ensure the logo is properly aligned */
+.navbar-brand {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
 }
