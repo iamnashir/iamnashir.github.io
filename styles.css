@@ -103,15 +103,14 @@ body {
 }
 /* General styles */
 body {
-    padding-top: 60px;
+    padding-top: 56px;
     /* Adjust this value if your navbar height is different */
 }
 
 /* Navbar styles */
 .curved-navbar {
-    border-radius: 10px;
-    background: linear-gradient(45deg, #1b1b2f, #162447, #1f4068, #1b1b2f);
-    padding: 10px 20px;
+    background-color: #1b1b2f;
+    padding: 10px 15px;
 }
 
 .navbar-brand .wrapper svg text {
@@ -123,32 +122,15 @@ body {
 
 .nav-link {
     color: white !important;
-    position: relative;
     transition: all 0.3s ease;
     padding: 5px 10px;
 }
 
-.nav-link::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
+.nav-link:hover {
+    color: #74c0fc !important;
 }
 
-.nav-link:hover::before {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 1;
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
-}
-
-/* Reduce navbar width and center align it */
+/* Center the navbar and reduce width */
 .curved-navbar {
     width: auto;
     margin: 0 auto;
@@ -166,25 +148,4 @@ body {
         display: block;
         width: 100%;
     }
-}
-
-/* Add animation for dynamic background */
-@keyframes gradientBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.curved-navbar {
-    background: linear-gradient(45deg, #1b1b2f, #162447, #1f4068, #1b1b2f);
-    background-size: 400% 400%;
-    animation: gradientBackground 15s ease infinite;
 }
