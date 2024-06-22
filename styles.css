@@ -17,18 +17,24 @@ header nav ul li a:hover {
     /* Tailwind yellow-500 */
 }
 
-section {
-    transition: background-color 0.3s, color 0.3s;
+.hover:glow-effect:hover {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 30px rgba(251, 191, 36, 0.4);
 }
 
-button#theme-toggle {
+#sidebar {
+    width: 250px;
+    height: 100%;
+}
+
+#theme-toggle {
     background: none;
     border: none;
     cursor: pointer;
 }
 
-button#theme-toggle span.material-icons {
-    font-size: 24px;
+#theme-toggle i {
     transition: color 0.3s;
 }
 

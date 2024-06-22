@@ -6,83 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nashiruddin Ahmed Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
     <!-- Navbar -->
-    <header class="bg-gray-800 text-white shadow-lg">
+    <header class="bg-gray-800 text-white shadow-lg fixed w-full z-10">
         <div class="container mx-auto flex justify-between items-center p-5">
             <div class="text-2xl font-bold">Nashir</div>
-            <nav>
+            <nav class="hidden md:flex space-x-6">
                 <ul class="flex space-x-6">
-                    <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
-                    <li><a href="#journey" class="hover:text-yellow-500">Journey</a></li>
-                    <li><a href="#experience" class="hover:text-yellow-500">Job Experience</a></li>
-                    <li><a href="#projects" class="hover:text-yellow-500">Projects</a></li>
-                    <li><a href="#resume" class="hover:text-yellow-500">Download Resume</a></li>
-                    <li><a href="#contact" class="hover:text-yellow-500">Contact Me</a></li>
+                    <li><a href="#home" class="hover:glow-effect">Home</a></li>
+                    <li><a href="#journey" class="hover:glow-effect">Journey</a></li>
+                    <li><a href="#experience" class="hover:glow-effect">Job Experience</a></li>
+                    <li><a href="#projects" class="hover:glow-effect">Projects</a></li>
+                    <li><a href="#resume" class="hover:glow-effect">Download Resume</a></li>
+                    <li><a href="#contact" class="hover:glow-effect">Contact Me</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="focus:outline-none">
-                <span id="theme-icon" class="material-icons">wb_sunny</span>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <i class='bx bx-menu text-3xl'></i>
+                </button>
+            </div>
+            <button id="theme-toggle" class="focus:outline-none ml-4">
+                <i id="theme-icon" class='bx bx-sun text-3xl'></i>
             </button>
         </div>
     </header>
 
-    <!-- Sections -->
-    <section id="home" class="h-screen flex items-center justify-center">
-        <h1 class="text-5xl">Welcome to My Portfolio</h1>
-    </section>
-    <section id="journey" class="py-20 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-8">My Journey</h2>
-            <!-- Journey content -->
+    <!-- Sidebar -->
+    <nav id="sidebar"
+        class="fixed inset-0 bg-gray-800 text-white z-20 transform -translate-x-full transition-transform md:hidden">
+        <div class="flex justify-between items-center p-5">
+            <div class="text-2xl font-bold">Nashir</div>
+            <button id="close-sidebar" class="focus:outline-none">
+                <i class='bx bx-x text-3xl'></i>
+            </button>
         </div>
-    </section>
-    <section id="experience" class="py-20">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-8">Job Experience</h2>
-            <!-- Experience content -->
-        </div>
-    </section>
-    <section id="projects" class="py-20 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-8">Projects</h2>
-            <!-- Projects content -->
-        </div>
-    </section>
-    <section id="resume" class="py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">Download Resume</h2>
-            <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-full hover:bg-yellow-600">Download Resume</a>
-        </div>
-    </section>
-    <section id="contact" class="py-20 bg-gray-100">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
-            <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
-                <div class="mb-4">
-                    <label class="block text-gray-700">Name</label>
-                    <input type="text"
-                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700">Email</label>
-                    <input type="email"
-                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700">Message</label>
-                    <textarea
-                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">Send
-                    Message</button>
-            </form>
-        </div>
-    </section>
+        <ul class="space-y-6 px-5">
+            <li><a href="#home" class="block hover:glow-effect">Home</a></li>
+            <li><a href="#journey" class="block hover:glow-effect">Journey</a></li>
+            <li><a href="#experience" class="block hover:glow-effect">Job Experience</a></li>
+            <li><a href="#projects" class="block hover:glow-effect">Projects</a></li>
+            <li><a href="#resume" class="block hover:glow-effect">Download Resume</a></li>
+            <li><a href="#contact" class="block hover:glow-effect">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-24">
+        <!-- Sections here... -->
+        <section id="home" class="h-screen flex items-center justify-center">
+            <h1 class="text-5xl">Welcome to My Portfolio</h1>
+        </section>
+        <!-- Other sections... -->
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-4">
