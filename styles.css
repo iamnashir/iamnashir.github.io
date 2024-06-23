@@ -11,103 +11,104 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: auto;padding: 0 20px;
-    }
-    
-    /* Navbar Styling */
-    .navbar {
-        background-color: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .navbar-brand .logo-part.orange {
-        color: orange;
-    }
-    
-    .navbar-brand .logo-part.black {
-        color: black;
-    }
-    
-    .navbar-nav .nav-link {
-        color: #343a40;
-    }
-    
-    .navbar-toggler-icon {
-        background-image: url(‘data:image/svg+xml;charset=utf8,%3Csvg viewBox=“0 0 30 30” xmlns=“http://www.w3.org/2000/svg”%3E%3Cpath stroke=“rgba%280, 0, 0, 0.5%29” stroke-width=“2” stroke-linecap=“round” stroke-miterlimit=“10” d=“M4 7h22M4 15h22M4 23h22”/%3E%3C/svg%3E’);
-    }
-    
-    /* Mobile Menu Styling */
-    .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        z-index: 1000;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 60px;
-    }
-    
-    .mobile-nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 20px;
-    }
-    
-    .mobile-nav-links a {
-        color: white;
-        font-size: 24px;
-        margin: 15px 0;
-        text-decoration: none;
-    }
-    
-    .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 36px;
-    }
-    
-    /* Hero Section Styling */
-    .hero {
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: linear-gradient(to right, #ff7e5f, #feb47b);
-        color: white;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-        margin: 0.5rem 0;
-    }
-    
-    .hero-image .image-container {
-        width: 300px;
-        height: 300px;
-        overflow: hidden;
-        border-radius: 50%;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
-    
-    .hero-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-    
-    /* Certificates Section Styling */
-    .certificates-carousel {
-        display: flex;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand .logo-part.orange {
+    color: orange;
+}
+
+.navbar-brand .logo-part.black {
+    color: black;
+}
+
+.navbar-nav .nav-link {
+    color: #343a40;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 60px;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.mobile-nav-links a {
+    color: white;
+    font-size: 24px;
+    margin: 15px 0;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+.hero-image .image-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Certificates Section Styling */
+.certificates-carousel {
+    display:flex;
         overflow: hidden;
         margin-top: 20px;
     }
@@ -126,12 +127,71 @@ body {
     }
     
     /* Contact Form Styling */
-    #contact-form .form-control {
+    .contact-form {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-form .form-group {
         margin-bottom: 15px;
     }
     
-    #contact-form button {
+    .contact-form .form-group label {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+    
+    .contact-form .form-group i {
+        margin-right: 10px;
+    }
+    
+    .contact-form .form-control {
         width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .contact-form .phone-input {
+        display: flex;
+    }
+    
+    .contact-form .phone-input select,
+    .contact-form .phone-input input {
+        margin-right: 10px;
+    }
+    
+    .contact-form .btn-send {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-form .btn-send i {
+        margin-right: 10px;
+    }
+    
+    .contact-form .btn-send:hover {
+        background-color: #0056b3;
+    }
+    
+    .contact-form #form-message {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        color: green;
+        text-align: center;
     }
     
     /* Footer Styling */
