@@ -41,13 +41,15 @@ $(document).ready(function() {
         $(this).trigger('reset');
     });
 
-    // Add download animation
-    $('.download-btn').click(function() {
-        const button = $(this);
-        button.addClass('downloading');
-
-        setTimeout(() => {
-            button.removeClass('downloading');
-        }, 2000); // Adjust the duration as needed
+    // Button hover effect
+    $('.btn-primary, .btn-success').each(function() {
+        $(this).hover(
+            function() {
+                $(this).addClass('glow');
+            },
+            function() {
+                $(this).removeClass('glow');
+            }
+        );
     });
 });

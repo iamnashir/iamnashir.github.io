@@ -12,6 +12,33 @@ body {
     transition: background 0.5s;
 }
 
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo-part {
+    transition: color 0.3s ease;
+}
+
+.logo-part.orange {
+    color: orange;
+}
+
+.logo-part.black {
+    color: black;
+}
+
+.navbar-brand:hover .logo-part.orange {
+    color: darkorange;
+}
+
+.navbar-brand:hover .logo-part.black {
+    color: #333;
+}
+
 .navbar-nav .nav-link {
     color: white !important;
     font-size: 1rem;
@@ -21,26 +48,30 @@ body {
     display: none;
 }
 
-.hero {
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-.hero-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 10px;
-}
-
-.section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
+.navbar-toggler {
+    border: none;
+    }
+    
+    .hero {
+        background: url(‘https://via.placeholder.com/1920x1080’) no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+    
+    .hero-content {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 10px;
+    }
+    
+    .section {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
         align-items: center;
         text-align: center;
         padding: 2rem;
@@ -54,7 +85,8 @@ body {
         background-color: #eaeaea;
     }
     
-    .btn-primary {
+    .btn-primary,
+    .btn-success {
         background-color: #007bff;
         border: none;
         padding: 0.5rem 1rem;
@@ -62,16 +94,34 @@ body {
         text-decoration: none;
         border-radius: 5px;
         margin-top: 1rem;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease;
     }
     
-    .btn-success {
-        background-color: #28a745;
-        border: none;
-        padding: 0.5rem 1rem;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 1rem;
+    .btn-primary::after,
+    .btn-success::after {
+        content: ‘’;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .btn-primary:hover::after,
+    .btn-success:hover::after {
+        width: 0;
+        height: 0;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    
+    .btn-primary:hover,
+    .btn-success:hover {
+        background-color: #0056b3;
     }
     
     .mobile-menu {
@@ -140,6 +190,7 @@ body {
     footer {
         background-color: #343a40;
         color: white;
+        padding: 2rem 0;
     }
     
     footer a {
@@ -149,27 +200,6 @@ body {
     
     footer a i {
         margin-left: 0.5rem;
-    }
-    
-    .download-btn {
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .download-btn::after {
-        content: ‘’;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateX(-100%);
-        transition: transform 0.5s ease-in-out;
-    }
-    
-    .download-btn:hover::after {
-        transform: translateX(0);
     }
     
     @media (max-width: 768px) {
@@ -186,5 +216,4 @@ body {
         
         .mobile-menu {
             display: block;
-        }
-    }
+        }}
