@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header.navbar {
@@ -113,6 +115,7 @@ header.navbar {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 2rem;
 }
 
 .section:nth-child(odd) {
@@ -136,6 +139,30 @@ header.navbar {
 
 .download-btn i {
     margin-right: 0.5rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-btn {
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Responsive Design */

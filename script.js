@@ -13,4 +13,18 @@ $(document).ready(function() {
             $('#mobile-menu').css('left', '-100%');
         }
     });
+
+    // Handle contact form submission
+    $('#contact-form').submit(function(event) {
+        event.preventDefault();
+
+        const formData = $(this).serialize();
+
+// Log the form data to the console (or send to a server
+    )
+        // Optionally show a success message
+    alert('Thank you for your message!');
+
+    // Reset the form
+    $(this).trigger('reset');
 });
