@@ -16,7 +16,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Nashir</a>
+            <a class="navbar-brand" href="#">My Logo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,27 +24,42 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home"><i class='bx bx-home'></i></a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#journey"><i class='bx bx-map'></i></a>
+                        <a class="nav-link" href="#journey">Journey</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience"><i class='bx bx-briefcase'></i></a>
+                        <a class="nav-link" href="#experience">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about"><i class='bx bx-user'></i></a>
+                        <a class="nav-link" href="#about">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#resume"><i class='bx bx-download'></i></a>
+                        <a class="nav-link" href="#resume">Download Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact"><i class='bx bx-envelope'></i></a>
+                        <a class="nav-link" href="#contact">Contact Me</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Sidebar for mobile -->
+    <div id="mobile-menu" class="mobile-menu hidden">
+        <nav class="mobile-nav-links">
+            <button id="close-btn" class="close-btn">
+                <i class='bx bx-x'></i>
+            </button>
+            <a href="#home"><i class='bx bx-home'></i></a>
+            <a href="#journey"><i class='bx bx-map'></i></a>
+            <a href="#experience"><i class='bx bx-briefcase'></i></a>
+            <a href="#about"><i class='bx bx-user'></i></a>
+            <a href="#resume"><i class='bx bx-download'></i></a>
+            <a href="#contact"><i class='bx bx-envelope'></i></a>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -60,6 +75,14 @@
                 <h1>Journey Section</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
                     tristique.</p>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Journey Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Journey Title</h5>
+                        <p class="card-text">Some quick example text to build on the journey title and make up the bulk
+                            of the card's content.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="experience" class="section">
@@ -67,6 +90,14 @@
                 <h1>Experience Section</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
                     tristique.</p>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Experience Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Experience Title</h5>
+                        <p class="card-text">Some quick example text to build on the experience title and make up the
+                            bulk of the card's content.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="about" class="section">
@@ -79,7 +110,7 @@
         <section id="resume" class="section">
             <div class="container">
                 <h1>Download Resume Section</h1>
-                <a href="../iamnashir.github.io/Files/nashiruddin_cv.pdf" download class="btn btn-primary">
+                <a href="files/resume.pdf" download class="btn btn-primary download-btn">
                     <i class='bx bx-download'></i> Download Resume
                 </a>
             </div>
@@ -95,6 +126,9 @@
                         <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="mb-3">
+                        <input type="tel" class="form-control" name="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="mb-3">
                         <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-success">Send Message</button>
@@ -102,6 +136,17 @@
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <p>Connect with me on:</p>
+            <a href="https://www.instagram.com" target="_blank" class="me-2"><i class='bx bxl-instagram'></i>
+                Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank" class="me-2"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+            <a href="https://www.github.com" target="_blank" class="me-2"><i class='bx bxl-github'></i> GitHub</a>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
