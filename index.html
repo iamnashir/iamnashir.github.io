@@ -5,87 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <header class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <div class="container">
-            <a href="#" class="logo">My Logo</a>
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#journey">Journey</a>
-                <a href="#experience">Experience</a>
-                <a href="#about">About Me</a>
-                <a href="#resume">Download Resume</a>
-                <a href="#contact">Contact Me</a>
-            </nav>
-            <button id="menu-btn" class="menu-btn">
-                <i class='bx bx-menu'></i>
+            <a class="navbar-brand" href="#">Nashir</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class='bx bx-home'></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#journey"><i class='bx bx-map'></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience"><i class='bx bx-briefcase'></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class='bx bx-user'></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume"><i class='bx bx-download'></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class='bx bx-envelope'></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
-
-    <!-- Sidebar for mobile -->
-    <div id="mobile-menu" class="mobile-menu hidden">
-        <nav class="mobile-nav-links">
-            <button id="close-btn" class="close-btn">
-                <i class='bx bx-x'></i>
-            </button>
-            <a href="#home">Home</a>
-            <a href="#journey">Journey</a>
-            <a href="#experience">Experience</a>
-            <a href="#about">About Me</a>
-            <a href="#resume">Download Resume</a>
-            <a href="#contact">Contact Me</a>
-        </nav>
-    </div>
+    </nav>
 
     <!-- Main Content -->
     <main>
         <section id="home" class="hero">
-            <div class="hero-content">
+            <div class="hero-content text-center text-white">
                 <h1>Welcome to My Portfolio</h1>
                 <p>Discover my journey, experience, and more.</p>
-                <a href="#about" class="hero-btn">Learn More</a>
+                <a href="#about" class="btn btn-primary">Learn More</a>
             </div>
         </section>
         <section id="journey" class="section">
-            <h1>Journey Section</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-                tristique.</p>
+            <div class="container">
+                <h1>Journey Section</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.</p>
+            </div>
         </section>
         <section id="experience" class="section">
-            <h1>Experience Section</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-                tristique.</p>
+            <div class="container">
+                <h1>Experience Section</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.</p>
+            </div>
         </section>
         <section id="about" class="section">
-            <h1>About Me Section</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-                tristique.</p>
+            <div class="container">
+                <h1>About Me Section</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.</p>
+            </div>
         </section>
         <section id="resume" class="section">
-            <h1>Download Resume Section</h1>
-            <a href="../iamnashir.github.io/Files/nashiruddin_cv.pdf" download class="download-btn">
-                <i class='bx bx-download'></i> Download Resume
-            </a>
+            <div class="container">
+                <h1>Download Resume Section</h1>
+                <a href="../iamnashir.github.io/Files/nashiruddin_cv.pdf" download class="btn btn-primary">
+                    <i class='bx bx-download'></i> Download Resume
+                </a>
+            </div>
         </section>
         <section id="contact" class="section">
-            <h1>Contact Me Section</h1>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="contact-btn">Send Message</button>
-            </form>
+            <div class="container">
+                <h1>Contact Me Section</h1>
+                <form id="contact-form">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
