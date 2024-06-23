@@ -5,41 +5,119 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+header.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header nav ul {
-    list-style: none;
+.container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-header nav ul li a {
-    color: white;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
     text-decoration: none;
 }
 
-.hero {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 5rem 1rem;
+.nav-links a {
+    margin: 0 1rem;
+    color: #333;
+    text-decoration: none;
 }
 
-.featured-projects {
-    padding: 2rem;
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mobile-nav-links a {
+    margin: 1rem 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section:nth-child(odd) {
     background-color: #f4f4f4;
 }
 
-footer {
-    background-color: #333;
+.section:nth-child(even) {
+    background-color: #eaeaea;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.download-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
 }

@@ -6,35 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">My Logo</a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#journey">Journey</a>
+                <a href="#experience">Experience</a>
+                <a href="#about">About Me</a>
+                <a href="#resume">Download Resume</a>
+                <a href="#contact">Contact Me</a>
+            </nav>
+            <button id="menu-btn" class="menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
     </header>
 
+    <!-- Sidebar for mobile -->
+    <div id="mobile-menu" class="mobile-menu hidden">
+        <button id="close-btn" class="close-btn">
+            <i class='bx bx-x'></i>
+        </button>
+        <nav class="mobile-nav-links">
+            <a href="#home">Home</a>
+            <a href="#journey">Journey</a>
+            <a href="#experience">Experience</a>
+            <a href="#about">About Me</a>
+            <a href="#resume">Download Resume</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
     <main>
-        <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Check out my work below.</p>
+        <section id="home" class="section">
+            <h1>Home Section</h1>
         </section>
-        <section class="featured-projects">
-            <h2>Featured Projects</h2>
-            <!-- Featured projects will go here -->
+        <section id="journey" class="section">
+            <h1>Journey Section</h1>
+        </section>
+        <section id="experience" class="section">
+            <h1>Experience Section</h1>
+        </section>
+        <section id="about" class="section">
+            <h1>About Me Section</h1>
+        </section>
+        <section id="resume" class="section">
+            <h1>Download Resume Section</h1>
+            <a href="files/resume.pdf" download class="download-btn">
+                <i class='bx bx-download'></i> Download Resume
+            </a>
+        </section>
+        <section id="contact" class="section">
+            <h1>Contact Me Section</h1>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
 
     <script src="js/scripts.js"></script>
 </body>
