@@ -248,40 +248,28 @@ footer p {
 }
 /* Home Section Styling */
 .hero {
-    padding: 100px 0;
-    background-color: #f9f9f9;
-    position: relative;
-    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=2336&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
 }
 
 .hero-content {
-    text-align: left;
-    padding-left: 30px;
-    animation: fadeInUp 1s ease forwards;
+    max-width: 600px;
 }
 
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    color: #343a40;
 }
 
 .hero-description {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #6c757d;
-}
-
-.hero-image {
-    text-align: center;
-    animation: zoomIn 1s ease 0.5s forwards;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
@@ -297,7 +285,37 @@ footer p {
     background-color: #555;
 }
 
-/* Keyframe animations */
+/* Animation Classes */
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -310,14 +328,12 @@ footer p {
     }
 }
 
-@keyframes zoomIn {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0.8);
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
     }
 }
