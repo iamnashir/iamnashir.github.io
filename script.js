@@ -54,4 +54,17 @@ $(document).ready(function() {
             $('#form-message').fadeOut();
         }, 3000);
     });
+    setInterval(function() {
+        $('.skills-carousel').animate({ marginLeft: '-=220px' }, 1000, function() {
+            $(this).find('.skill-card:first').appendTo($(this));
+            $(this).css('margin-left', '0');
+        });
+    }, 3000);
+    // Infinite loop for skills carousel
+    setInterval(function() {
+        $('.skills-carousel').animate({ marginLeft: '-=220px' }, 1000, function() {
+            $(this).find('.skill-card:first').appendTo($(this));
+            $(this).css('margin-left', '0');
+        });
+    }, 3000);
 });

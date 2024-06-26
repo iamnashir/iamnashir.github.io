@@ -108,105 +108,213 @@ body {
 
 /* Certificates Section Styling */
 .certificates-carousel {
-    display:flex;
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.certificate-card {
+    min-width: 200px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.contact-form .form-group i {
+    margin-right: 10px;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form .phone-input {
+    display: flex;
+}
+
+.contact-form .phone-input select,
+.contact-form .phone-input input {
+    margin-right: 10px;
+}
+
+.contact-form .btn-send {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.contact-form .btn-send i {
+    margin-right: 10px;
+}
+
+.contact-form .btn-send:hover {
+    background-color: #0056b3;
+}
+
+.contact-form #form-message {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: green;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+}
+
+footer a {
+    color: #343a40;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 10px 0 0;
+    color: #343a40;
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #343a40;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background: #343a40;
+    border-radius: 50%;
+    z-index: 1;
+    left: -10px;
+}
+
+.timeline-item:nth-child(even::before {
+        left: auto;
+        right: -10px;
+    }
+
+    .timeline-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .timeline-content h3 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        color: #0072ff;
+    }
+
+    .timeline-content p {
+        margin: 0;
+    }
+
+    /* Certificates Section Styling */
+    .certificates-carousel {
+        display: flex;
         overflow: hidden;
         margin-top: 20px;
     }
-    
+
     .certificate-card {
         min-width: 200px;
         margin: 0 15px;
         text-align: center;
     }
-    
+
     .certificate-card img {
         width: 100%;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
-    
-    /* Contact Form Styling */
-    .contact-form {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-    
-    .contact-form .form-group {
-        margin-bottom: 15px;
-    }
-    
-    .contact-form .form-group label {
-        display: block;
-        font-size: 1.1rem;
-        margin-bottom: 5px;
-    }
-    
-    .contact-form .form-group i {
-        margin-right: 10px;
-    }
-    
-    .contact-form .form-control {
-        width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .contact-form .phone-input {
+
+    /* Skills Section Styling */
+    .skills-carousel {
         display: flex;
+        overflow: hidden;
+        margin-top: 20px;
     }
-    
-    .contact-form .phone-input select,
-    .contact-form .phone-input input {
-        margin-right: 10px;
-    }
-    
-    .contact-form .btn-send {
-        background-color: #007bff;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.3s;
-    }
-    
-    .contact-form .btn-send i {
-        margin-right: 10px;
-    }
-    
-    .contact-form .btn-send:hover {
-        background-color: #0056b3;
-    }
-    
-    .contact-form #form-message {
-        margin-top: 15px;
-        font-size: 1.2rem;
-        color: green;
+
+    .skill-card {
+        min-width: 200px;
+        margin: 0 15px;
         text-align: center;
     }
-    
-    /* Footer Styling */
-    footer {
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 20px 0;
-    }
-    
-    footer a {
-        color: #343a40;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-    
-    footer p {
-        margin: 10px 0 0;
-        color: #343a40;
+
+    .skill-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
