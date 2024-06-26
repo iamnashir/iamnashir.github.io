@@ -91,6 +91,20 @@ $(document).ready(function() {
     addAnimationClass(); // Initial check on page load
 });
 
+    document.addEventListener('DOMContentLoaded', function () {
+    function animateHeroContent() {
+        const heroTitle = document.querySelector('.hero-title');
+        const heroDescription = document.querySelector('.hero-description');
+        const heroImage = document.querySelector('.hero-image');
+
+        heroTitle.classList.add('animate__animated', 'animate__fadeInDown');
+        heroDescription.classList.add('animate__animated', 'animate__fadeInUp');
+        heroImage.classList.add('animate__animated', 'animate__zoomIn');
+    }
+
+    animateHeroContent(); // Initial animation on page load
+});
+
 
 
 });

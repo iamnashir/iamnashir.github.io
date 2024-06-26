@@ -246,3 +246,78 @@ footer p {
 .timeline-content a:hover {
     color: #0056b3;
 }
+/* Home Section Styling */
+.hero {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: left;
+    padding-left: 30px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #6c757d;
+}
+
+.hero-image {
+    text-align: center;
+    animation: zoomIn 1s ease 0.5s forwards;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #343a40;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #555;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
