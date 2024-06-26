@@ -67,4 +67,30 @@ $(document).ready(function() {
             $(this).css('margin-left', '0');
         });
     }, 3000);
+    
+    document.addEventListener('DOMContentLoaded', function () {
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom > 0
+        );
+    }
+
+    function addAnimationClass() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach(function (item) {
+            if (isInViewport(item)) {
+                item.classList.add('animate');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', addAnimationClass);
+    window.addEventListener('resize', addAnimationClass);
+    addAnimationClass(); // Initial check on page load
+});
+
+
+
 });
