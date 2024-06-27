@@ -37,44 +37,7 @@ body {
     background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
 }
 
-/* Mobile Menu Styling */
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 60px;
-}
 
-.mobile-nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 20px;
-}
-
-.mobile-nav-links a {
-    color: white;
-    font-size: 24px;
-    margin: 15px 0;
-    text-decoration: none;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 36px;
-}
 
 /* Hero Section Styling */
 .hero {
@@ -416,6 +379,32 @@ h2 {
 }
 
 /* Timeline Styles */
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Timeline Styles */
 .timeline {
     display: flex;
     flex-direction: column;
@@ -489,10 +478,6 @@ h2 {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .timeline {
-        flex-direction: column;
-    }
-
     .timeline::before {
         left: 20px;
         transform: none;
@@ -512,5 +497,30 @@ h2 {
         height: 20px;
         background: #ff6f61;
         border-radius: 50%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .timeline-item {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .timeline {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .timeline-item {
+        width: 45%;
+        margin: 10px;
+    }
+
+    .timeline::before {
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        height: 100%;
     }
 }
