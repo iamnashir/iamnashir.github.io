@@ -1,0 +1,538 @@
+// General Styling
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #343a40;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+// Navbar Styling
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    .logo-part {
+        &.orange {
+            color: orange;
+        }
+
+        &.black {
+            color: black;
+        }
+    }
+}
+
+.navbar-nav {
+    .nav-link {
+        color: #343a40;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(0, 0, 0, 0.5)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+// Hero Section Styling
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+
+    &-content {
+        h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+    }
+
+    &-image {
+        .image-container {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Certificates Section Styling
+.certificates-carousel {
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.certificate-card {
+    min-width: 200px;
+    margin: 0 15px;
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+// Contact Form Styling
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .phone-input {
+        display: flex;
+
+        select,
+        input {
+            margin-right: 10px;
+        }
+    }
+
+    .btn-send {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+
+        i {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    #form-message {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        color: green;
+        text-align: center;
+    }
+}
+
+// Footer Styling
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+
+    a {
+        color: #343a40;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    p {
+        margin: 10px 0 0;
+        color: #343a40;
+    }
+}
+
+// Timeline Styling
+.timeline {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+        position: relative;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-left: 2px solid #007bff;
+        margin-bottom: 20px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #ddd;
+            transform: translateX(-50%);
+        }
+
+        .timeline-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            margin-left: 30px;
+
+            h3 {
+                font-size: 24px;
+                margin: 0 0 10px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 10px;
+                    color: #ff6f61;
+                }
+            }
+
+            p {
+                color: #ddd;
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 10px;
+                color: #ff6f61;
+                text-decoration: none;
+
+                &:hover {
+                    color: #0056b3;
+                }
+            }
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    @media (max-width: 768px) {
+        &::before {
+            left: 20px;
+            transform: none;
+        }
+
+        &-item {
+            width: 100%;
+            padding-left: 40px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: #ff6f61;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        &-item {
+            width: 70%;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        & {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            width: 45%;
+            margin: 10px;
+        }
+
+        &::before {
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+        }
+    }
+}
+
+// Home Section Styling
+.hero {
+    background: url('https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=2336&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+
+    &-content {
+        max-width: 600px;
+    }
+
+    &-title {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    &-description {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+}
+
+// Button Styling
+.btn-primary {
+    background-color: #343a40;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #555;
+    }
+}
+
+// Animation Classes
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+// Keyframe Animations
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+// Base Styles
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+// Timeline Styles
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    margin: 40px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        background: #ddd;
+        transform: translateX(-50%);
+    }
+
+    &-item {
+        position: relative;
+        width: 80%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        color: #fff;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: left;
+
+        .timeline-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+
+            h3 {
+                font-size: 24px;
+                margin: 0 0 10px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 10px;
+                    color: #ff6f61;
+                }
+            }
+
+            p {
+                color: #ddd;
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 10px;
+                color: #ff6f61;
+                text-decoration: none;
+
+                &:hover {
+                    color: #0056b3;
+                }
+            }
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    @media (max-width: 768px) {
+        &::before {
+            left: 20px;
+            transform: none;
+        }
+
+        &-item {
+            width: 100%;
+            padding-left: 40px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: #ff6f61;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        &-item {
+            width: 70%;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        & {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            width: 45%;
+            margin: 10px;
+        }
+
+        &::before {
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+        }
+    }
+}
